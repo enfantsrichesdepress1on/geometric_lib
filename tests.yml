@@ -10,8 +10,8 @@ jobs:
   build-and-test:
     runs-on: ubuntu-latest
     env:
-      FULL_NAME: "Иванов Иван Иванович"
-      GROUP: "123-AB"
+      FULL_NAME: "Марусяк Никита Владимирович"
+      GROUP: "М3116"
     steps:
       - name: Check out code
         uses: actions/checkout@v2
@@ -35,3 +35,4 @@ jobs:
 
       - name: Lint code
         run: flake8 .
+

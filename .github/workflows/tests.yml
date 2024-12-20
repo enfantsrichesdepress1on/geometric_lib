@@ -1,0 +1,37 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, release* ]
+  pull_request:
+    branches: [ master, release*, develop ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    env:
+      FULL_NAME: "Марусяк Никита Владимирович"
+      GROUP: "М3116"
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Print info
+        run: |
+          echo "ФИО: $FULL_NAME"
+          echo "Группа: $GROUP"
+          echo "Github Actor: ${{ github.actor }}"
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.13'
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run Tests
+        run: pytest
+
+      - name: Lint code
+        run: flake8 .

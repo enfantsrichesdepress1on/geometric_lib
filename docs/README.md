@@ -14,7 +14,7 @@
 
 ## 2. Описание каждой функции с примерами вызова
 
-### 2.1 Функция `calculate_circle_area(r)`
+### 2.1 Функция `area(r)`
 
 Вычисляет площадь круга.
 
@@ -29,13 +29,13 @@
 **Пример вызова**:
 
 ```python
-calculate_circle_area(5)
+area(5)
 # Возвращает: 78.53981633974483
 ```
 
 ---
 
-### 2.2 Функция `calculate_circle_perimeter(r)`
+### 2.2 Функция `perimeter(r)`
 
 Вычисляет периметр круга.
 
@@ -50,13 +50,13 @@ calculate_circle_area(5)
 **Пример вызова**:
 
 ```python
-calculate_circle_perimeter(5)
+perimeter(5)
 # Возвращает: 31.41592653589793
 ```
 
 ---
 
-### 2.3 Функция `calculate_square_area(a)`
+### 2.3 Функция `area(a)`
 
 Вычисляет площадь квадрата.
 
@@ -71,13 +71,13 @@ calculate_circle_perimeter(5)
 **Пример вызова**:
 
 ```python
-calculate_square_area(6)
+area(6)
 # Возвращает: 36.0
 ```
 
 ---
 
-### 2.4 Функция `calculate_square_perimeter(a)`
+### 2.4 Функция `perimeter(a)`
 
 Вычисляет периметр квадрата.
 
@@ -92,13 +92,13 @@ calculate_square_area(6)
 **Пример вызова**:
 
 ```python
-calculate_square_perimeter(6)
+perimeter(6)
 # Возвращает: 24.0
 ```
 
 ---
 
-### 2.5 Функция `calculate_rectangle_area(a, b)`
+### 2.5 Функция `area(a, b)`
 
 Вычисляет площадь прямоугольника.
 
@@ -114,13 +114,13 @@ calculate_square_perimeter(6)
 **Пример вызова**:
 
 ```python
-calculate_rectangle_area(10, 4)
+area(10, 4)
 # Возвращает: 40.0
 ```
 
 ---
 
-### 2.6 Функция `calculate_rectangle_perimeter(a, b)`
+### 2.6 Функция `perimeter(a, b)`
 
 Вычисляет периметр прямоугольника.
 
@@ -136,7 +136,7 @@ calculate_rectangle_area(10, 4)
 **Пример вызова**:
 
 ```python
-calculate_rectangle_perimeter(10, 4)
+perimeter(10, 4)
 
 ## История изменения проекта
 - `d078c8d`: Добавление документации 

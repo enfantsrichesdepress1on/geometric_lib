@@ -137,6 +137,10 @@ calculate_rectangle_area(10, 4)
 
 ```python
 calculate_rectangle_perimeter(10, 4)
+
+## История изменения проекта
+- `d078c8d`: Добавление документации 
+- `8ba9aeb`: Добавление папок Circle и Square 
 # Возвращает: 28.0
 ```
 

@@ -19,7 +19,6 @@ sizes = {
     'perimeter-square': 1
 }
 
-
 def calc(fig, func, size):
     """
     Вычисляет и выводит результат функции для заданной фигуры.
@@ -39,11 +38,7 @@ def calc(fig, func, size):
     result = figs[fig][func](*size)
     return result
 
-
 if __name__ == "__main__":
-    """
-    Основная функция, которая запрашивает у пользователя данные и вызывает calc.
-    """
     func = ''
     fig = ''
     size = []

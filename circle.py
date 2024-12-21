@@ -5,7 +5,7 @@ import math
 Пример использования:
 area(5)   Возвращает 78.53981633974483
 """
-def area(r):
+def calculate_circle_area(r):
     return math.pi * r * r
 
 """
@@ -14,7 +14,7 @@ def area(r):
 Пример использования:
 perimeter(5)   Возвращает 31.41592653589793
 """
-def perimeter(r):
+def calculate_circle_perimeter(r):
     return 2 * math.pi * r
 
 

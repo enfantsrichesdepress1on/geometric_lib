@@ -1,3 +1,4 @@
+```python
 import math
 
 def calculate_circle_area(radius):
@@ -64,3 +65,4 @@ if __name__ == "__main__":
     side = 6.0
     print("Площадь квадрата:", calculate_square_area(side))
     print("Периметр квадрата:", calculate_square_perimeter(side))
+```

@@ -1,18 +1,33 @@
 import unittest
-from rectangle import area, perimeter
+from triangle import area, perimeter
+import math
 
-class TestRectangleFunctions(unittest.TestCase):
-    def test_area(self):
-        self.assertEqual(area(10, 4), 40)
-        self.assertEqual(area(5, 5), 25)
-        self.assertEqual(area(0, 10), 0)
-        self.assertEqual(area(7, 3), 21)
 
-    def test_perimeter(self):
-        self.assertEqual(perimeter(10, 4), 28)
-        self.assertEqual(perimeter(5, 5), 20)
-        self.assertEqual(perimeter(0, 10), 20)
-        self.assertEqual(perimeter(7, 3), 20)
+class TestTriangleFunctions(unittest.TestCase):
+
+    def test_area_valid_triangle(self):
+        # Arrange
+        a, b, c = 3, 4, 5
+        s = (a + b + c) / 2
+        expected_area = math.sqrt(s * (s - a) * (s - b) * (s - c))
+
+        # Act
+        result = area(a, b, c)
+
+        # Assert
+        self.assertAlmostEqual(result, expected_area, places=5)
+
+    def test_perimeter_valid_triangle(self):
+        # Arrange
+        a, b, c = 3, 4, 5
+        expected_perimeter = a + b + c
+
+        # Act
+        result = perimeter(a, b, c)
+
+        # Assert
+        self.assertEqual(result, expected_perimeter)
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1,5 +1,5 @@
 import unittest
-from rectangle.py import area, perimeter
+from rectangle import area, perimeter
 
 class TestRectangleFunctions(unittest.TestCase):
     def test_area(self):

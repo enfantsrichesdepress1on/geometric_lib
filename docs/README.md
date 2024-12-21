@@ -142,3 +142,9 @@ int main() {
     std::cout << "Периметр квадрата: " << calculate_square_perimeter(side) << std::endl;
     return 0;
 }
+
+
+## История изменения проекта
+
+- `d078c8d`: Добавление документации 
+- `8ba9aeb`: Добавление папок Circle и Square 

@@ -1,33 +1,54 @@
+import unittest
 import math
+from circle import area, perimeter
 
 
-def area(r):
-    """
-    Вычисляет площадь круга.
+class TestCircleFunctions(unittest.TestCase):
 
-    Параметры:
-    r (int): Радиус круга.
+    def test_area_positive_radius(self):
+        # Arrange
+        radius = 5
+        expected_area = math.pi * radius * radius
 
-    Возвращает:
-    float: Площадь круга.
+        # Act
+        result = area(radius)
 
-    Пример вызова:
-    area(5)  # Возвращает 78.53981633974483
-    """
-    return math.pi * r * r
+        # Assert
+        self.assertAlmostEqual(result, expected_area, places=5)
+
+    def test_area_zero_radius(self):
+        # Arrange
+        radius = 0
+        expected_area = 0
+
+        # Act
+        result = area(radius)
+
+        # Assert
+        self.assertEqual(result, expected_area)
+
+    def test_perimeter_positive_radius(self):
+        # Arrange
+        radius = 5
+        expected_perimeter = 2 * math.pi * radius
+
+        # Act
+        result = perimeter(radius)
+
+        # Assert
+        self.assertAlmostEqual(result, expected_perimeter, places=5)
+
+    def test_perimeter_zero_radius(self):
+        # Arrange
+        radius = 0
+        expected_perimeter = 0
+
+        # Act
+        result = perimeter(radius)
+
+        # Assert
+        self.assertEqual(result, expected_perimeter)
 
 
-def perimeter(r):
-    """
-    Вычисляет длину окружности.
-
-    Параметры:
-    r (int): Радиус круга.
-
-    Возвращает:
-    float: Периметр круга.
-
-    Пример вызова:
-    perimeter(5)  # Возвращает 31.41592653589793
-    """
-    return 2 * math.pi * r
+if __name__ == "__main__":
+    unittest.main()

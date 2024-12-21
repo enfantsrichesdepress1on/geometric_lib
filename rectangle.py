@@ -29,7 +29,7 @@ def perimeter(a, b):
     return a + b
 
 if __name__ == "__main__":
-    length = 10
-    width = 4
+    a = 10
+    b = 4
     print("Площадь прямоугольника:", area(a, b))
     print("Периметр прямоугольника:", perimeter(a, b))

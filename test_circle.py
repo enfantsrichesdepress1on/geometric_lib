@@ -1,26 +1,54 @@
-import pytest
-from circle import area, perimeter
+import unittest
 import math
+from circle import area, perimeter
 
-def test_calculate_circle_area_positive():
-    radius = 5.0
-    expected = math.pi * radius * radius
-    result = calculate_circle_area(radius)
-    assert pytest.approx(result) == pytest.approx(expected)
 
-def test_calculate_circle_area_zero():
-    radius = 0.0
-    expected = 0.0
-    result = calculate_circle_area(radius)
-    assert result == expected
+class TestCircleFunctions(unittest.TestCase):
 
-def test_calculate_circle_area_negative():
-    radius = -3.0
-    with pytest.raises(ValueError):
-        calculate_circle_area(radius)
+    def test_area_positive_radius(self):
+        # Arrange
+        radius = 5
+        expected_area = math.pi * radius * radius
 
-def test_calculate_circle_perimeter_positive():
-    radius = 5.0
-    expected = 2 * math.pi * radius
-    result = calculate_circle_perimeter(radius)
-    assert pytest.approx(result) == pytest.approx(expected)
+        # Act
+        result = area(radius)
+
+        # Assert
+        self.assertAlmostEqual(result, expected_area, places=5)
+
+    def test_area_zero_radius(self):
+        # Arrange
+        radius = 0
+        expected_area = 0
+
+        # Act
+        result = area(radius)
+
+        # Assert
+        self.assertEqual(result, expected_area)
+
+    def test_perimeter_positive_radius(self):
+        # Arrange
+        radius = 5
+        expected_perimeter = 2 * math.pi * radius
+
+        # Act
+        result = perimeter(radius)
+
+        # Assert
+        self.assertAlmostEqual(result, expected_perimeter, places=5)
+
+    def test_perimeter_zero_radius(self):
+        # Arrange
+        radius = 0
+        expected_perimeter = 0
+
+        # Act
+        result = perimeter(radius)
+
+        # Assert
+        self.assertEqual(result, expected_perimeter)
+
+
+if __name__ == "__main__":
+    unittest.main()

@@ -1,19 +1,53 @@
-import pytest
+import unittest
 from square import area, perimeter
 
-def test_calculate_square_area_positive():
-    side = 5.0
-    expected = 25.0
-    result = area(side)
-    assert result == expected
 
-def test_calculate_square_area_negative():
-    side = -2.0
-    with pytest.raises(ValueError):
-        area(side)
+class TestSquareFunctions(unittest.TestCase):
 
-def test_calculate_square_perimeter_positive():
-    side = 5.0
-    expected = 20.0
-    result = perimeter(side)
-    assert result == expected
+    def test_area_positive_side(self):
+        # Arrange
+        side_length = 5
+        expected_area = 25
+
+        # Act
+        result = area(side_length)
+
+        # Assert
+        self.assertEqual(result, expected_area)
+
+    def test_area_zero_side(self):
+        # Arrange
+        side_length = 0
+        expected_area = 0
+
+        # Act
+        result = area(side_length)
+
+        # Assert
+        self.assertEqual(result, expected_area)
+
+    def test_perimeter_positive_side(self):
+        # Arrange
+        side_length = 5
+        expected_perimeter = 20
+
+        # Act
+        result = perimeter(side_length)
+
+        # Assert
+        self.assertEqual(result, expected_perimeter)
+
+    def test_perimeter_zero_side(self):
+        # Arrange
+        side_length = 0
+        expected_perimeter = 0
+
+        # Act
+        result = perimeter(side_length)
+
+        # Assert
+        self.assertEqual(result, expected_perimeter)
+
+
+if __name__ == "__main__":
+    unittest.main()

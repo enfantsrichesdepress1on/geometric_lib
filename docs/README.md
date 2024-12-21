@@ -1,150 +1,66 @@
-# Math formulas
-## Area
-- Circle: S = πR²
-- Rectangle: S = ab
-- Square: S = a²
+import math
 
-## Perimeter
-- Circle: P = 2πR
-- Rectangle: P = 2a + 2b
-- Square: P = 4a
+def calculate_circle_area(radius):
+    """
+    Функция рассчитывает площадь круга по формуле S = π * R².
+    :param radius: Радиус круга.
+    :return: Площадь круга.
+    """
+    return math.pi * radius * radius
 
-## Общее описание решения
+def calculate_rectangle_area(length, width):
+    """
+    Функция рассчитывает площадь прямоугольника по формуле S = a * b.
+    :param length: Длина прямоугольника.
+    :param width: Ширина прямоугольника.
+    :return: Площадь прямоугольника.
+    """
+    return length * width
 
-Этот проект содержит функции для расчёта площади и периметра геометрических фигур: круга, прямоугольника и квадрата. 
-Формулы для вычислений базируются на известных математических правилах, а результаты возвращаются в стандартных единицах.
+def calculate_square_area(side):
+    """
+    Функция рассчитывает площадь квадрата по формуле S = a².
+    :param side: Длина стороны квадрата.
+    :return: Площадь квадрата.
+    """
+    return side * side
 
-### Доступные функции:
-1. Расчёт площади:
-   - Круга: `S = πR²`
-   - Прямоугольника: `S = ab`
-   - Квадрата: `S = a²`
-2. Расчёт периметра:
-   - Круга: `P = 2πR`
-   - Прямоугольника: `P = 2a + 2b`
-   - Квадрата: `P = 4a`
+def calculate_circle_perimeter(radius):
+    """
+    Функция рассчитывает периметр (длину окружности) по формуле P = 2πR.
+    :param radius: Радиус круга.
+    :return: Периметр круга.
+    """
+    return 2 * math.pi * radius
 
-## Описание каждой функции с примерами вызова
+def calculate_rectangle_perimeter(length, width):
+    """
+    Функция рассчитывает периметр прямоугольника по формуле P = 2(a + b).
+    :param length: Длина прямоугольника.
+    :param width: Ширина прямоугольника.
+    :return: Периметр прямоугольника.
+    """
+    return 2 * (length + width)
 
-### Функции для расчёта площади
+def calculate_square_perimeter(side):
+    """
+    Функция рассчитывает периметр квадрата по формуле P = 4a.
+    :param side: Длина стороны квадрата.
+    :return: Периметр квадрата.
+    """
+    return 4 * side
 
-#### 1. Площадь круга
-**Формула:** `S = πR²`
+if __name__ == "__main__":
+    # Примеры расчётов
+    radius = 5.0
+    print("Площадь круга:", calculate_circle_area(radius))
+    print("Периметр круга:", calculate_circle_perimeter(radius))
 
-**Пример вызова:**
-```cpp
-#include <cmath>
-#include <iostream>
+    length = 10.0
+    width = 4.0
+    print("Площадь прямоугольника:", calculate_rectangle_area(length, width))
+    print("Периметр прямоугольника:", calculate_rectangle_perimeter(length, width))
 
-double calculate_circle_area(double radius) {
-    return M_PI * radius * radius;
-}
-
-int main() {
-    double radius = 5.0;
-    std::cout << "Площадь круга: " << calculate_circle_area(radius) << std::endl;
-    return 0;
-}
-```
-
-#### 2. Площадь прямоугольника
-**Формула:** `S = ab`
-
-**Пример вызова:**
-```cpp
-#include <iostream>
-
-double calculate_rectangle_area(double length, double width) {
-    return length * width;
-}
-
-int main() {
-    double length = 10.0;
-    double width = 4.0;
-    std::cout << "Площадь прямоугольника: " << calculate_rectangle_area(length, width) << std::endl;
-    return 0;
-}
-```
-
-#### 3. Площадь квадрата
-**Формула:** `S = a²`
-
-**Пример вызова:**
-```cpp
-#include <iostream>
-
-double calculate_square_area(double side) {
-    return side * side;
-}
-
-int main() {
-    double side = 6.0;
-    std::cout << "Площадь квадрата: " << calculate_square_area(side) << std::endl;
-    return 0;
-}
-```
-
----
-
-### Функции для расчёта периметра
-
-#### 1. Периметр круга
-**Формула:** `P = 2πR`
-
-**Пример вызова:**
-```cpp
-#include <cmath>
-#include <iostream>
-
-double calculate_circle_perimeter(double radius) {
-    return 2 * M_PI * radius;
-}
-
-int main() {
-    double radius = 5.0;
-    std::cout << "Периметр круга: " << calculate_circle_perimeter(radius) << std::endl;
-    return 0;
-}
-```
-
-#### 2. Периметр прямоугольника
-**Формула:** `P = 2a + 2b`
-
-**Пример вызова:**
-```cpp
-#include <iostream>
-
-double calculate_rectangle_perimeter(double length, double width) {
-    return 2 * (length + width);
-}
-
-int main() {
-    double length = 10.0;
-    double width = 4.0;
-    std::cout << "Периметр прямоугольника: " << calculate_rectangle_perimeter(length, width) << std::endl;
-    return 0;
-}
-```
-
-#### 3. Периметр квадрата
-**Формула:** `P = 4a`
-
-**Пример вызова:**
-```cpp
-#include <iostream>
-
-double calculate_square_perimeter(double side) {
-    return 4 * side;
-}
-
-int main() {
-    double side = 6.0;
-    std::cout << "Периметр квадрата: " << calculate_square_perimeter(side) << std::endl;
-    return 0;
-}
-
-```
-## История изменения проекта
-
-- `d078c8d`: Добавление документации 
-- `8ba9aeb`: Добавление папок Circle и Square 
+    side = 6.0
+    print("Площадь квадрата:", calculate_square_area(side))
+    print("Периметр квадрата:", calculate_square_perimeter(side))

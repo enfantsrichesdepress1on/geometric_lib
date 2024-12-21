@@ -22,22 +22,25 @@
 # Math Formulas
 
 ## Area
-- **Circle**: 
-  \[ S = \pi R^2 \]
-- **Rectangle**: 
-  \[ S = ab \]
-- **Square**: 
-  \[ S = a^2 \]
-- **Triangle**: 
-  \[ S = \sqrt{p \cdot (p-a) \cdot (p-b) \cdot (p-c)} \]  
+- **Circle**:  
+  \( S = \pi R^2 \)
+- **Rectangle**:  
+  \( S = ab \)
+- **Square**:  
+  \( S = a^2 \)
+- **Triangle**:  
+  \( S = \sqrt{p \cdot (p-a) \cdot (p-b) \cdot (p-c)} \)  
   where \( p \) is the semiperimeter: \( p = \frac{a+b+c}{2} \)
 
 ## Perimeter
-- **Circle**: 
-  \[ P = 2 \pi R \]
-- **Rectangle**: 
-  \[ P = 2a + 2b \]
-- **Square**: 
-  \[ P = 4a \]
+- **Circle**:  
+  \( P = 2 \pi R \)
+- **Rectangle**:  
+  \( P = 2a + 2b \)
+- **Square**:  
+  \( P = 4a \)
+- **Triangle**:  
+  \( P = a + b + c \)
+
 - **Triangle**: 
   \[ P = a + b + c \]

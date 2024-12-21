@@ -1,6 +1,5 @@
 import math
 
-
 def area(radius):
     """
     Вычисляет площадь круга.
@@ -15,7 +14,6 @@ def area(radius):
     area(5)  # Возвращает 78.53981633974483
     """
     return math.pi * radius * radius
-
 
 def perimeter(radius):
     """

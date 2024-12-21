@@ -1,12 +1,12 @@
 import math
 
 
-def area(r):
+def area(radius):
     """
     Вычисляет площадь круга.
 
     Параметры:
-    r (int): Радиус круга.
+    radius (int): Радиус круга.
 
     Возвращает:
     float: Площадь круга.
@@ -14,15 +14,15 @@ def area(r):
     Пример вызова:
     area(5)  # Возвращает 78.53981633974483
     """
-    return math.pi * r * r
+    return math.pi * radius * radius
 
 
-def perimeter(r):
+def perimeter(radius):
     """
     Вычисляет длину окружности.
 
     Параметры:
-    r (int): Радиус круга.
+    radius (int): Радиус круга.
 
     Возвращает:
     float: Периметр круга.
@@ -30,4 +30,4 @@ def perimeter(r):
     Пример вызова:
     perimeter(5)  # Возвращает 31.41592653589793
     """
-    return 2 * math.pi * r
+    return 2 * math.pi * radius

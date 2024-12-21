@@ -1,6 +1,6 @@
 import math
 
-def calculate_circle_area(radius):
+def area(radius):
     """
     Вычисляет площадь круга.
     Формула: S = πR²
@@ -9,17 +9,17 @@ def calculate_circle_area(radius):
     """
     return math.pi * radius**2
 
-def calculate_rectangle_area(length, width):
+def area(a, b):
     """
     Вычисляет площадь прямоугольника.
     Формула: S = ab
-    :param length: Длина прямоугольника.
-    :param width: Ширина прямоугольника.
+    :param a: Длина прямоугольника.
+    :param b: Ширина прямоугольника.
     :return: Площадь прямоугольника.
     """
-    return length * width
+    return a * b
 
-def calculate_square_area(side):
+def area(side):
     """
     Вычисляет площадь квадрата.
     Формула: S = a²
@@ -28,7 +28,7 @@ def calculate_square_area(side):
     """
     return side**2
 
-def calculate_circle_perimeter(radius):
+def perimeter(radius):
     """
     Вычисляет периметр круга.
     Формула: P = 2πR
@@ -37,17 +37,17 @@ def calculate_circle_perimeter(radius):
     """
     return 2 * math.pi * radius
 
-def calculate_rectangle_perimeter(length, width):
+def perimeter(a, b):
     """
     Вычисляет периметр прямоугольника.
     Формула: P = 2a + 2b
-    :param length: Длина прямоугольника.
-    :param width: Ширина прямоугольника.
+    :param a: Длина прямоугольника.
+    :param b: Ширина прямоугольника.
     :return: Периметр прямоугольника.
     """
-    return 2 * length + 2 * width
+    return 2 * a + 2 * b
 
-def calculate_square_perimeter(side):
+def perimeter(side):
     """
     Вычисляет периметр квадрата.
     Формула: P = 4a
@@ -58,14 +58,14 @@ def calculate_square_perimeter(side):
 
 if __name__ == "__main__":
     radius = 5.0
-    print("Площадь круга:", calculate_circle_area(radius))
-    print("Периметр круга:", calculate_circle_perimeter(radius))
+    print("Площадь круга:", area(radius))
+    print("Периметр круга:", perimeter(radius))
 
     length = 10.0
     width = 4.0
-    print("Площадь прямоугольника:", calculate_rectangle_area(length, width))
-    print("Периметр прямоугольника:", calculate_rectangle_perimeter(length, width))
+    print("Площадь прямоугольника:", area(a, b))
+    print("Периметр прямоугольника:", perimeter(a, b))
 
     side = 6.0
-    print("Площадь квадрата:", calculate_square_area(side))
-    print("Периметр квадрата:", calculate_square_perimeter(side))
+    print("Площадь квадрата:", area(side))
+    print("Периметр квадрата:", perimeter(side))

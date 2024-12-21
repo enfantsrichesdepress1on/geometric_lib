@@ -1,5 +1,5 @@
 import pytest
-from circle import calculate_circle_area, calculate_circle_perimeter
+from circle import area, perimeter
 import math
 
 def test_calculate_circle_area_positive():

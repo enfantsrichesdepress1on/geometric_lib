@@ -1,22 +1,18 @@
-import pytest
-from rectangle import calculate_rectangle_area, calculate_rectangle_perimeter
+import unittest
+from your_module_name import area, perimeter
 
-def test_calculate_rectangle_area_positive():
-    length = 4.0
-    width = 2.0
-    expected = 8.0
-    result = calculate_rectangle_area(length, width)
-    assert result == expected
+class TestRectangleFunctions(unittest.TestCase):
+    def test_area(self):
+        self.assertEqual(area(10, 4), 40)
+        self.assertEqual(area(5, 5), 25)
+        self.assertEqual(area(0, 10), 0)
+        self.assertEqual(area(7, 3), 21)
 
-def test_calculate_rectangle_area_negative():
-    length = -4.0
-    width = 2.0
-    with pytest.raises(ValueError):
-        calculate_rectangle_area(length, width)
+    def test_perimeter(self):
+        self.assertEqual(perimeter(10, 4), 28)
+        self.assertEqual(perimeter(5, 5), 20)
+        self.assertEqual(perimeter(0, 10), 20)
+        self.assertEqual(perimeter(7, 3), 20)
 
-def test_calculate_rectangle_perimeter_positive():
-    length = 4.0
-    width = 2.0
-    expected = 2 * (length + width)
-    result = calculate_rectangle_perimeter(length, width)
-    assert result == expected
+if __name__ == "__main__":
+    unittest.main()

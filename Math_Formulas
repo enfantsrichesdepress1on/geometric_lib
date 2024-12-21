@@ -1,0 +1,71 @@
+import math
+
+def area(radius):
+    """
+    Вычисляет площадь круга.
+    Формула: S = πR²
+    :param radius: Радиус круга.
+    :return: Площадь круга.
+    """
+    return math.pi * radius**2
+
+def area(a, b):
+    """
+    Вычисляет площадь прямоугольника.
+    Формула: S = ab
+    :param a: Длина прямоугольника.
+    :param b: Ширина прямоугольника.
+    :return: Площадь прямоугольника.
+    """
+    return a * b
+
+def area(side):
+    """
+    Вычисляет площадь квадрата.
+    Формула: S = a²
+    :param side: Длина стороны квадрата.
+    :return: Площадь квадрата.
+    """
+    return side**2
+
+def perimeter(radius):
+    """
+    Вычисляет периметр круга.
+    Формула: P = 2πR
+    :param radius: Радиус круга.
+    :return: Периметр круга.
+    """
+    return 2 * math.pi * radius
+
+def perimeter(a, b):
+    """
+    Вычисляет периметр прямоугольника.
+    Формула: P = 2a + 2b
+    :param a: Длина прямоугольника.
+    :param b: Ширина прямоугольника.
+    :return: Периметр прямоугольника.
+    """
+    return 2 * a + 2 * b
+
+def perimeter(side):
+    """
+    Вычисляет периметр квадрата.
+    Формула: P = 4a
+    :param side: Длина стороны квадрата.
+    :return: Периметр квадрата.
+    """
+    return 4 * side
+
+if __name__ == "__main__":
+    radius = 5.0
+    print("Площадь круга:", area(radius))
+    print("Периметр круга:", perimeter(radius))
+
+    length = 10.0
+    width = 4.0
+    print("Площадь прямоугольника:", area(a, b))
+    print("Периметр прямоугольника:", perimeter(a, b))
+
+    side = 6.0
+    print("Площадь квадрата:", area(side))
+    print("Периметр квадрата:", perimeter(side))

@@ -1,35 +1,33 @@
-def area(a, b):
-    """
-    Вычисляет площадь прямоугольника.
+import unittest
+from triangle import area, perimeter
+import math
 
-    Параметры:
-    a, b (int): Длина и ширина прямоугольника.
 
-    Возвращает:
-    int: Площадь прямоугольника.
+class TestTriangleFunctions(unittest.TestCase):
 
-    Пример вызова:
-    area(10, 4)  # Возвращает 40
-    """
-    return a * b
+    def test_area_valid_triangle(self):
+        # Arrange
+        a, b, c = 3, 4, 5
+        s = (a + b + c) / 2
+        expected_area = math.sqrt(s * (s - a) * (s - b) * (s - c))
 
-def perimeter(a, b):
-    """
-    Вычисляет периметр прямоугольника.
+        # Act
+        result = area(a, b, c)
 
-    Параметры:
-    a, b (int): Длина и ширина прямоугольника.
+        # Assert
+        self.assertAlmostEqual(result, expected_area, places=5)
 
-    Возвращает:
-    int: Периметр прямоугольника.
+    def test_perimeter_valid_triangle(self):
+        # Arrange
+        a, b, c = 3, 4, 5
+        expected_perimeter = a + b + c
 
-    Пример вызова:
-    perimeter(10, 4)  # Возвращает 28
-    """
-    return 2 * (a + b)
+        # Act
+        result = perimeter(a, b, c)
+
+        # Assert
+        self.assertEqual(result, expected_perimeter)
+
 
 if __name__ == "__main__":
-    a = 10
-    b = 4
-    print("Площадь прямоугольника:", area(a, b))
-    print("Периметр прямоугольника:", perimeter(a, b))
+    unittest.main()

@@ -1,29 +1,53 @@
-def area(a):
-    """
-    Вычисляет площадь квадрата с заданной целой стороной.
+import unittest
+from square import area, perimeter
 
-    Параметры:
-    a (int): Длина стороны квадрата.
 
-    Возвращает:
-    int: Площадь квадрата.
+class TestSquareFunctions(unittest.TestCase):
 
-    Пример вызова:
-    area(4)  # Возвращает 16
-    """
-    return a * a
+    def test_area_positive_side(self):
+        # Arrange
+        side_length = 5
+        expected_area = 25
 
-def perimeter(a):
-    """
-    Вычисляет периметр квадрата с заданной целой стороной.
+        # Act
+        result = area(side_length)
 
-    Параметры:
-    a (int): Длина стороны квадрата.
+        # Assert
+        self.assertEqual(result, expected_area)
 
-    Возвращает:
-    int: Периметр квадрата.
+    def test_area_zero_side(self):
+        # Arrange
+        side_length = 0
+        expected_area = 0
 
-    Пример вызова:
-    perimeter(4)  # Возвращает 16
-    """
-    return 4 * a
+        # Act
+        result = area(side_length)
+
+        # Assert
+        self.assertEqual(result, expected_area)
+
+    def test_perimeter_positive_side(self):
+        # Arrange
+        side_length = 5
+        expected_perimeter = 20
+
+        # Act
+        result = perimeter(side_length)
+
+        # Assert
+        self.assertEqual(result, expected_perimeter)
+
+    def test_perimeter_zero_side(self):
+        # Arrange
+        side_length = 0
+        expected_perimeter = 0
+
+        # Act
+        result = perimeter(side_length)
+
+        # Assert
+        self.assertEqual(result, expected_perimeter)
+
+
+if __name__ == "__main__":
+    unittest.main()

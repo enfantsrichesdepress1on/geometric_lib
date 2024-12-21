@@ -24,9 +24,9 @@ def perimeter(a, b):
     int: Периметр прямоугольника.
 
     Пример вызова:
-    perimeter(10, 4)  # Возвращает 14
+    perimeter(10, 4)  # Возвращает 28
     """
-    return a + b
+    return 2 * (a + b)
 
 if __name__ == "__main__":
     a = 10
